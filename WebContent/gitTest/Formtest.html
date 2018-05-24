@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> </title>
+
+</head>
+<body>
+
+<!-- <h2>The method Attribute</h2> -->
+<!-- <p>This form will be submitted using the GET method:</p> -->
+
+<!-- <form action="/action_page.php" target="_blank" method="GET"> -->
+<!--   First name:<br> -->
+<!--   <input type="text" name="firstname" value="Mickey"> -->
+<!--   <br> -->
+<!--   Last name:<br> -->
+<!--   <input type="text" name="lastname" value="Mouse"> -->
+<!--   <br><br> -->
+<!--   <input type="submit" value="Submit"> -->
+<!-- </form> -->
+
+<!-- <p>After you submit, notice that the form values is visible in the address bar of the new browser tab.</p> -->
+
+<h2>The method Attribute</h2>
+<p>This form will be submitted using the POST method:</p>
+
+<form action="/action_page.php" target="_blank" method="POST">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>After you submit, notice that, unlike the GET method, the form values is NOT visible in the address bar of the new browser tab.</p>
+
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other  
+</form> 
+
+
+
+
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+<h2> hava in boddy</h2>
+<p id = "demo"> </p>
+<script> document.getElementById("demo").innerHTML = "my javasC"</script>
+
+
+<h2>JavaScript Arrays</h2>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo0"></p>
+
+<script>
+var fruits, text, fLen, i;
+
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo3").innerHTML = text;
+document.getElementById("demo4").innerHTML = fruits.pop();
+var strPush = fruits.push("Kiwi");
+document.getElementById("demo5").innerHTML = fruits;
+
+var arraySplice =fruits.splice(0,2);
+document.getElementById("demo6").innerHTML = fruits;
+
+
+for(var i in fruits){
+	text1 += "<li>" + fruits[i] + "</li>";
+}
+
+
+document.getElementById("demo0").innerHTML = text1;
+</script>
+
+<p id = "dm1"></p>
+<script>
+var person1 = {firstName : "Jone",lastName:"Doe", age:50, EC:"blue"}
+var x = person1; x.age =10;
+var person2= {firstName:"Jone", lastName:"Doe" fullName:function(firstVal, secondVal){
+	return this.firstName + "" + firstVal + "" + secondVal;}
+	};
+}
+document.getElementById("dm1").innerHTML = person1.firstName + "is " + person1.age + "years old";
+person2.nationality = "korean";
+delete person1 age;
+
+
+</script>
+
+
+</body>
+</html>
